@@ -1,11 +1,12 @@
 'use strict';
 const gamePacks=[
+ {id:'sanguosha',name:'三国杀',symbol:'杀',category:'基础牌攻防',mode:'教学模拟',desc:'杀、闪、桃与回合响应。',color:'crimson',adapter:true,rule:'简化基础牌 · 四回合练习'},
  {id:'doudizhu',name:'斗地主',symbol:'♠',category:'三人牌局',mode:'教学演示可用',desc:'出牌建议、局面纠错、追问与复盘。',color:'forest',adapter:true,rule:'标准三人 · 出牌阶段'},
- {id:'guandan',name:'掼蛋',symbol:'双',category:'四人协作',mode:'专项适配待开发',desc:'先体验观察与记录，后续接入配合策略。',color:'blue',adapter:false,rule:'规则版本待选择'},
- {id:'mahjong',name:'麻将',symbol:'東',category:'牌效与判断',mode:'专项适配待开发',desc:'先记录可见局面，具体玩法需独立适配。',color:'ochre',adapter:false,rule:'麻将规则待选择'},
- {id:'spire',name:'杀戮尖塔',symbol:'Ⅰ',category:'单人卡牌',mode:'专项适配待开发',desc:'为战斗、选卡和路线保留观察记录。',color:'plum',adapter:false,rule:'游戏版本待确认'},
- {id:'chess',name:'国际象棋',symbol:'♞',category:'棋盘策略',mode:'专项适配待开发',desc:'统一陪伴界面，棋盘与引擎接入待完成。',color:'slate',adapter:false,rule:'标准规则 · 待接入'},
- {id:'custom',name:'其他游戏',symbol:'＋',category:'自定义会话',mode:'通用观察流程',desc:'输入游戏名称，建立独立的会话与笔记。',color:'neutral',adapter:false,rule:'自定义 · 未适配'}
+ {id:'guandan',name:'掼蛋',symbol:'双',category:'四人协作',mode:'简化教学模拟',desc:'先体验观察与记录，后续接入配合策略。',color:'blue',adapter:true,rule:'规则版本待选择'},
+ {id:'mahjong',name:'麻将',symbol:'東',category:'牌效与判断',mode:'简化教学模拟',desc:'先记录可见局面，具体玩法需独立适配。',color:'ochre',adapter:true,rule:'麻将规则待选择'},
+ {id:'spire',name:'杀戮尖塔',symbol:'Ⅰ',category:'单人卡牌',mode:'简化教学模拟',desc:'为战斗、选卡和路线保留观察记录。',color:'plum',adapter:true,rule:'游戏版本待确认'},
+ {id:'chess',name:'国际象棋',symbol:'♞',category:'棋盘策略',mode:'简化教学模拟',desc:'统一陪伴界面，棋盘与引擎接入待完成。',color:'slate',adapter:true,rule:'标准规则 · 待接入'},
+ {id:'custom',name:'其他游戏',symbol:'＋',category:'自定义会话',mode:'通用回合沙盘',desc:'输入游戏名称，建立独立的会话与笔记。',color:'neutral',adapter:true,rule:'自定义 · 未适配'}
 ];
 let currentGame='doudizhu',pendingGame='doudizhu',customName='',observerStage='idle';
 let gameNotes={};try{const n=JSON.parse(localStorage.getItem('paiwise.gameNotes')||'{}');if(n&&typeof n==='object'&&!Array.isArray(n))gameNotes=n}catch{}
