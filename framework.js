@@ -1,6 +1,6 @@
 'use strict';
 const gamePacks=[
- {id:'sanguosha',name:'三国杀',symbol:'杀',category:'基础牌攻防',mode:'教学模拟',desc:'杀、闪、桃与回合响应。',color:'crimson',adapter:true,rule:'简化基础牌 · 四回合练习'},
+ {id:'sanguosha',name:'三国杀',symbol:'杀',category:'五人身份对局',mode:'教学模拟',desc:'杀、闪、桃与回合响应。',color:'crimson',adapter:true,rule:'五人身份 · 标准规则原型'},
  {id:'doudizhu',name:'斗地主',symbol:'♠',category:'三人牌局',mode:'教学演示可用',desc:'出牌建议、局面纠错、追问与复盘。',color:'forest',adapter:true,rule:'标准三人 · 出牌阶段'},
  {id:'guandan',name:'掼蛋',symbol:'双',category:'四人协作',mode:'简化教学模拟',desc:'先体验观察与记录，后续接入配合策略。',color:'blue',adapter:true,rule:'规则版本待选择'},
  {id:'mahjong',name:'麻将',symbol:'東',category:'牌效与判断',mode:'简化教学模拟',desc:'先记录可见局面，具体玩法需独立适配。',color:'ochre',adapter:true,rule:'麻将规则待选择'},
